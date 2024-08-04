@@ -1,0 +1,3 @@
+seleniumbase==2.4.9
+openpyxl==3.0.9
+pytest==7.1.2
