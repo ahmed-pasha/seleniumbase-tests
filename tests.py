@@ -21,17 +21,17 @@ class AdditionalTheInternetTests(BaseCase):
         self.open("https://the-internet.herokuapp.com/javascript_alerts")
         
         self.click("button[onclick='jsAlert()']")
-        self.wait_for_alert(timeout=20)  # Increase timeout to 20 seconds
+        self.wait_for_alert(timeout=20)
         self.accept_alert()
         self.assert_text("You successfully clicked an alert", "#result")
 
         self.click("button[onclick='jsConfirm()']")
-        self.wait_for_alert(timeout=20)  # Increase timeout to 20 seconds
+        self.wait_for_alert(timeout=20)
         self.dismiss_alert()
         self.assert_text("You clicked: Cancel", "#result")
 
         self.click("button[onclick='jsPrompt()']")
-        self.wait_for_alert(timeout=20)  # Increase timeout to 20 seconds
+        self.wait_for_alert(timeout=20)
         self.send_keys_to_alert("SeleniumBase")
         self.accept_alert()
         self.assert_text("You entered: SeleniumBase", "#result")
@@ -44,6 +44,9 @@ class AdditionalTheInternetTests(BaseCase):
         self.open("https://the-internet.herokuapp.com/dynamic_controls")
         self.click("#checkbox-example button")
         self.assert_text("It's gone!", "#message")
+
+        # This step will fail intentionally
+        self.assert_element("#checkbox")  # This element should not exist
 
         self.click("#checkbox-example button")
         self.assert_element("#checkbox")
