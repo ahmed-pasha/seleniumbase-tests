@@ -43,6 +43,17 @@ This repository contains automated tests using SeleniumBase for various function
 
 ## Running the Tests
 
+
+
+## Expected Outcome
+- Form Authentication: Pass
+- File Upload: Pass
+- JavaScript Alerts: Pass
+- Basic Authentication: Pass
+- Dynamic Controls: Fail (This is intentional to demonstrate error handling)
+
+  ## Running the Tests
+
 To run the tests, use the following command:
 ```bash
 pytest -v tests.py
