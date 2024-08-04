@@ -5,46 +5,44 @@
 [![GitHub stars](https://img.shields.io/github/stars/ahmed-pasha/seleniumbase-tests)](https://github.com/ahmed-pasha/seleniumbase-tests/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/ahmed-pasha/seleniumbase-tests)](https://github.com/ahmed-pasha/seleniumbase-tests/network)
 
-## Table of Contents
-- [Project Description](#project-description)
-- [Setup Instructions](#setup-instructions)
-- [Running Tests](#running-tests)
-- [Test Details](#test-details)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+# SeleniumBase Tests for The Internet Herokuapp
 
-## Project Description
+This repository contains automated tests using SeleniumBase for various functionalities on the "the-internet.herokuapp.com" website. The tests cover form authentication, file upload, JavaScript alerts, basic authentication, and dynamic controls.
 
-This repository contains automated tests using SeleniumBase for testing various functionalities on the [the-internet.herokuapp.com](https://the-internet.herokuapp.com) website. The tests cover form authentication, file upload, JavaScript alerts, basic authentication, and dynamic controls.
+## Test Cases
 
-## Setup Instructions
+1. **Form Authentication**
+2. **File Upload**
+3. **JavaScript Alerts**
+4. **Basic Authentication**
+5. **Dynamic Controls** (Deliberately set to fail)
 
-Follow these instructions to set up and run the tests on your local machine.
+## Prerequisites
 
-### Prerequisites
+- Python 3.6+
+- Pip (Python package installer)
 
-- Python 3.x
-- pip (Python package installer)
-- Git
+## Installation
 
-### Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/seleniumbase-tests.git
+    cd seleniumbase-tests
+    ```
 
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/ahmed-pasha/seleniumbase-tests.git
-   cd seleniumbase-tests
-2. **Create and activate a virtual environment (optional but recommended)**:
-   ```sh
-   python -m venv venv
-   .\venv\Scripts\Activate  # On Windows
-   source venv/bin/activate  # On macOS/Linux
-3. **Install the required packages**:
-   ```sh
-    pip install seleniumbase
-4. **To run the tests, execute the following command**:
-   ```sh
-   pytest -v tests.py
+2. Create and activate a virtual environment:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+    ```
 
+3. Install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+## Running the Tests
 
+To run the tests, use the following command:
+```bash
+pytest -v tests.py
